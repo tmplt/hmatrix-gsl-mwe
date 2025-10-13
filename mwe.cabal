@@ -1,0 +1,22 @@
+cabal-version:      3.0
+name:               mwe
+version:            0.0.0.0
+
+library
+  ghc-options:     -Wall
+  hs-source-dirs:  src
+  exposed-modules:
+    MWE
+  build-depends:
+    , base         >=4 && <5
+    , hmatrix-gsl  ^>=0.19.0.1
+
+test-suite doctests
+  type:             exitcode-stdio-1.0
+  hs-source-dirs:   tests
+  main-is:          doctests.hs
+  ghc-options:      -threaded
+  build-depends:
+    , base              >=4   && <5
+    , doctest-parallel
+    , mwe

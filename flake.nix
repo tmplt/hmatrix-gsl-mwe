@@ -17,6 +17,8 @@
               root = ./.;
               fileset = lib.fileset.unions [ ./src ./tests ./mwe.cabal ];
             });
+
+            autoWire = [ "packages" "devShells" ];
           };
 
           working = broken // { basePackages = pkgs.haskell.packages.ghc96; };

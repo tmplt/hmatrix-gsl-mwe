@@ -11,8 +11,7 @@ library
     , base         >=4 && <5
     , hmatrix-gsl  ^>=0.19.0.1
 
-test-suite doctests
-  type:             exitcode-stdio-1.0
+executable doctests
   hs-source-dirs:   tests
   main-is:          doctests.hs
   ghc-options:      -threaded

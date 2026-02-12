@@ -6,5 +6,6 @@ import MWE (mwe)
 
 main :: IO ()
 main = do
-     putStrLn . show $ mwe
+     putStrLn $ "Here's an explicit invocation of mwe: " ++ (show $ mwe)
+     putStrLn $ "Everything below this line is mwe via mainFromCabal:"
      mainFromCabal "mwe" =<< getArgs
